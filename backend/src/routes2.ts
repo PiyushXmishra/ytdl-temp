@@ -45,7 +45,7 @@ const generateUniqueFilename = (base: string): string => {
  */
 async function getQualityLabels(videoUrl: string): Promise<string[]> {
   try {
-    const { stdout: Update } = await execAsync(`yt-dlp -U`);
+    const { stdout: Update } = await execAsync(`python3 -m pip install -U "yt-dlp[default]"`);
     console.log(Update);
     const { stdout : version } = await execAsync(`yt-dlp --version`);
     console.log(version);
