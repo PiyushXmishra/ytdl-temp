@@ -28,7 +28,7 @@ COPY backend/package*.json ./
 
 RUN NODE_ENV=development npm install
 
-COPY backend .
+COPY . .
 
 RUN npm install -g typescript
 
