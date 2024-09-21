@@ -45,10 +45,10 @@ const generateUniqueFilename = (base: string): string => {
  */
 async function getQualityLabels(videoUrl: string): Promise<string[]> {
   try {
-    const { stdout: Update } = await execAsync(`python3 -m pip install -U "yt-dlp[default]"`);
-    console.log(Update);
-    const { stdout : version } = await execAsync(`yt-dlp --version`);
-    console.log(version);
+    // const { stdout: Update } = await execAsync(`python3 -m pip install -U "yt-dlp[default]"`);
+    // console.log(Update);
+    // const { stdout : version } = await execAsync(`yt-dlp --version`);
+    // console.log(version);
     const { stdout: formatsStdout } = await execAsync(`yt-dlp -F ${videoUrl}`);
     const formatLines = formatsStdout.split("\n").slice(4); // Skip the first few header lines
 
